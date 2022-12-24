@@ -13,6 +13,7 @@ const Budget = () => {
 
         if(newBudget > remaining)
         {
+            setBudget(newBudget);
             alert("budget cannot exceed remaining funds of: £" + remaining);
             return;
         }
@@ -35,13 +36,11 @@ const Budget = () => {
     return (
         <div className='alert alert-secondary'>
             <span>
-                Budget: £{budget}
-                <input
+            Budget:£<input
                     required='required'
                     type='number'
                     id='cost'
                     step="10"
-                    max="20000"
                     value={budgetState}
                     style={{ marginLeft: '2rem' , size: 10}}
                     onChange={(event) => onUpdateBudget(event.target.value)}
