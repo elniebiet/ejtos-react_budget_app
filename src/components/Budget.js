@@ -11,6 +11,13 @@ const Budget = () => {
         console.log("old budget" + budget);
         console.log("new budget" + newBudget);
 
+        if(newBudget > 20000)
+        {
+            setBudget(20000);
+            alert("budget cannot exceed remaining funds of: £" + remaining);
+            return;
+        }
+        
         if(newBudget > remaining)
         {
             setBudget(newBudget);
@@ -42,7 +49,7 @@ const Budget = () => {
                     id='cost'
                     step="10"
                     value={budgetState}
-                    style={{ marginLeft: '2rem' , size: 10}}
+                    style={{ marginLeft: '1rem' , size: 7}}
                     onChange={(event) => onUpdateBudget(event.target.value)}
                     >
                 </input>
