@@ -49,7 +49,7 @@ const Budget = () => {
                     id='cost'
                     step="10"
                     value={budgetState}
-                    style={{ marginLeft: '1rem' , size: 7}}
+                    style={{ marginLeft: '0rem' , size: 7}}
                     onChange={(event) => onUpdateBudget(event.target.value)}
                     >
                 </input>
