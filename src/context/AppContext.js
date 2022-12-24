@@ -60,7 +60,7 @@ export const AppReducer = (state, action) => {
         case 'SET_BUDGET':
             action.type = "DONE";
             state.budget = action.payload;
-
+            console.log("new payload: " + action.payload[''])
             return {
                 ...state,
             };
@@ -72,6 +72,7 @@ export const AppReducer = (state, action) => {
             }
 
         default:
+            console.log("default")
             return state;
     }
 };
