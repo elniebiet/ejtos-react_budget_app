@@ -14,7 +14,7 @@ const Budget = () => {
         if(newBudget > 20000)
         {
             setBudget(20000);
-            alert("budget cannot exceed remaining funds of: £" + remaining);
+            alert("budget cannot exceed remaining funds of: £20000");
             return;
         }
         
